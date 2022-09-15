@@ -39,7 +39,6 @@
             this.btnChia = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbKetQua = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.rdbLabel = new System.Windows.Forms.RadioButton();
             this.rdbMessage = new System.Windows.Forms.RadioButton();
@@ -150,17 +149,6 @@
             this.lbKetQua.TabIndex = 10;
             this.lbKetQua.Text = "0";
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(0, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(135, 25);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -201,7 +189,6 @@
             this.Controls.Add(this.rdbMessage);
             this.Controls.Add(this.rdbLabel);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.lbKetQua);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnChia);
@@ -235,7 +222,6 @@
         private System.Windows.Forms.Button btnChia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbKetQua;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton rdbLabel;
         private System.Windows.Forms.RadioButton rdbMessage;
