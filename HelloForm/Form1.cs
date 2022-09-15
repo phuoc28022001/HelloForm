@@ -41,11 +41,15 @@ namespace HelloForm
         {
             try
             {
+
+                #region Lấy dữ liệu
                 var _soThuNhat = txtSoThuNhat.Text;
                 var _soThuHai = txtSoThuHai.Text;
                 error.Clear();
+                #endregion
 
-                if(String.IsNullOrEmpty(_soThuNhat))
+                #region Kiểm tra dữ liệu hợp lệ
+                if (String.IsNullOrEmpty(_soThuNhat))
                 {
                     error.SetError(txtSoThuNhat, "Vui lòng nhập số thứ nhất");
                     return;
@@ -56,36 +60,41 @@ namespace HelloForm
                     error.SetError(txtSoThuNhat, "Vui lòng nhập số thứ hai");
                     return;
                 }
+                #endregion
 
 
+                #region Xử lý dữ liệu
                 var soThuNhat = Convert.ToDouble(_soThuNhat);
                 var soThuHai = Convert.ToDouble(_soThuHai);
 
                 double ketQua = soThuNhat + soThuHai;
 
-                if(rdbLabel.Checked)
+                if (rdbLabel.Checked)
                 {
                     lbKetQua.Text = ketQua.ToString("N2");
                 }
                 else
                 {
                     MessageBox.Show($"Kết quả: {ketQua:N2}");
-                }
+                } 
+                #endregion
 
-                
+
             }
-            catch(FormatException ex)
+            #region Exception
+            catch (FormatException ex)
             {
                 MessageBox.Show("Dữ liệu bạn nhập không đúng. Vui lòng xem lại");
             }
-            catch(OverflowException ex)
+            catch (OverflowException ex)
             {
                 MessageBox.Show("Dữ liệu bạn nhập quá lớn. Vui lòng xem lại");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Khum biết");
-            }
+            } 
+            #endregion
 
         }
 
@@ -102,6 +111,18 @@ namespace HelloForm
         private void rdbLabel_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lnkChonMau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ColorDialog dialog = new ColorDialog();
+            var result = dialog.ShowDialog();
+
+            if(result == DialogResult.OK)
+            {
+                var color = dialog.Color;
+                this.BackColor = color;
+            }
         }
     }
 }

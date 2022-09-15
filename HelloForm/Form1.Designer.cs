@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.rdbLabel = new System.Windows.Forms.RadioButton();
             this.rdbMessage = new System.Windows.Forms.RadioButton();
+            this.lnkChonMau = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -181,11 +182,23 @@
             this.rdbMessage.Text = "Tên messageBox";
             this.rdbMessage.UseVisualStyleBackColor = true;
             // 
+            // lnkChonMau
+            // 
+            this.lnkChonMau.AutoSize = true;
+            this.lnkChonMau.Location = new System.Drawing.Point(17, 484);
+            this.lnkChonMau.Name = "lnkChonMau";
+            this.lnkChonMau.Size = new System.Drawing.Size(89, 21);
+            this.lnkChonMau.TabIndex = 15;
+            this.lnkChonMau.TabStop = true;
+            this.lnkChonMau.Text = "Chọn màu";
+            this.lnkChonMau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkChonMau_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 472);
+            this.ClientSize = new System.Drawing.Size(889, 583);
+            this.Controls.Add(this.lnkChonMau);
             this.Controls.Add(this.rdbMessage);
             this.Controls.Add(this.rdbLabel);
             this.Controls.Add(this.label5);
@@ -225,6 +238,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton rdbLabel;
         private System.Windows.Forms.RadioButton rdbMessage;
+        private System.Windows.Forms.LinkLabel lnkChonMau;
     }
 }
 
