@@ -39,34 +39,54 @@ namespace HelloForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            var _soThuNhat = txtSoThuNhat.Text;
-            var _soThuHai = txtSoThuHai.Text;
-            error.Clear();
-
-            if(String.IsNullOrEmpty(_soThuNhat))
+            try
             {
-                error.SetError(txtSoThuNhat, "Vui lòng nhập số thứ nhất");
-                return;
+                var _soThuNhat = txtSoThuNhat.Text;
+                var _soThuHai = txtSoThuHai.Text;
+                error.Clear();
+
+                if(String.IsNullOrEmpty(_soThuNhat))
+                {
+                    error.SetError(txtSoThuNhat, "Vui lòng nhập số thứ nhất");
+                    return;
+                }
+
+                if (String.IsNullOrEmpty(_soThuHai))
+                {
+                    error.SetError(txtSoThuNhat, "Vui lòng nhập số thứ hai");
+                    return;
+                }
+
+
+                var soThuNhat = Convert.ToDouble(_soThuNhat);
+                var soThuHai = Convert.ToDouble(_soThuHai);
+
+                double ketQua = soThuNhat + soThuHai;
+
+                if(rdbLabel.Checked)
+                {
+                    lbKetQua.Text = ketQua.ToString("N2");
+                }
+                else
+                {
+                    MessageBox.Show($"Kết quả: {ketQua:N2}");
+                }
+
+                
+            }
+            catch(FormatException ex)
+            {
+                MessageBox.Show("Dữ liệu bạn nhập không đúng. Vui lòng xem lại");
+            }
+            catch(OverflowException ex)
+            {
+                MessageBox.Show("Dữ liệu bạn nhập quá lớn. Vui lòng xem lại");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Khum biết");
             }
 
-            if (String.IsNullOrEmpty(_soThuHai))
-            {
-                error.SetError(txtSoThuNhat, "Vui lòng nhập số thứ hai");
-                return;
-            }
-
-            if (String.IsNullOrEmpty(_soThuHai))
-            {
-                error.SetError(txtSoThuNhat, "Vui lòng nhập số thứ hai");
-                return;
-            }
-
-            var soThuNhat = Convert.ToDouble(_soThuNhat);
-            var soThuHai = Convert.ToDouble(_soThuHai);
-
-            double v = soThuNhat + soThuHai;
-            lbKetQua.Text = v.ToString("N2");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -75,6 +95,11 @@ namespace HelloForm
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbLabel_CheckedChanged(object sender, EventArgs e)
         {
 
         }

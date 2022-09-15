@@ -39,6 +39,10 @@
             this.btnChia = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.lbKetQua = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.rdbLabel = new System.Windows.Forms.RadioButton();
+            this.rdbMessage = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -146,11 +150,58 @@
             this.lbKetQua.TabIndex = 10;
             this.lbKetQua.Text = "0";
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(0, 0);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(135, 25);
+            this.radioButton1.TabIndex = 11;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 415);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 21);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Hiển thị kết quả";
+            // 
+            // rdbLabel
+            // 
+            this.rdbLabel.AutoSize = true;
+            this.rdbLabel.Location = new System.Drawing.Point(174, 415);
+            this.rdbLabel.Name = "rdbLabel";
+            this.rdbLabel.Size = new System.Drawing.Size(108, 25);
+            this.rdbLabel.TabIndex = 13;
+            this.rdbLabel.TabStop = true;
+            this.rdbLabel.Text = "Tên Label";
+            this.rdbLabel.UseVisualStyleBackColor = true;
+            this.rdbLabel.CheckedChanged += new System.EventHandler(this.rdbLabel_CheckedChanged);
+            // 
+            // rdbMessage
+            // 
+            this.rdbMessage.AutoSize = true;
+            this.rdbMessage.Location = new System.Drawing.Point(368, 413);
+            this.rdbMessage.Name = "rdbMessage";
+            this.rdbMessage.Size = new System.Drawing.Size(162, 25);
+            this.rdbMessage.TabIndex = 14;
+            this.rdbMessage.TabStop = true;
+            this.rdbMessage.Text = "Tên messageBox";
+            this.rdbMessage.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 472);
+            this.Controls.Add(this.rdbMessage);
+            this.Controls.Add(this.rdbLabel);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.lbKetQua);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnChia);
@@ -184,6 +235,10 @@
         private System.Windows.Forms.Button btnChia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbKetQua;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton rdbLabel;
+        private System.Windows.Forms.RadioButton rdbMessage;
     }
 }
 
