@@ -122,6 +122,21 @@ namespace HelloForm
             {
                 var color = dialog.Color;
                 this.BackColor = color;
+                this.BackgroundImage = null;
+            }
+        }
+
+        private void linkChonHinh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            var result = dialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var imagePath = dialog.FileName;
+                this.BackgroundImage = new Bitmap(imagePath);
+                this.BackgroundImageLayout = ImageLayout.Stretch;
+                this.BackColor = Color.White;
             }
         }
     }
