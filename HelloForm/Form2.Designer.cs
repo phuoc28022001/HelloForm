@@ -33,6 +33,8 @@
             this.cbbKhoa = new System.Windows.Forms.ComboBox();
             this.gridGiangVien = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnThongTinGiangVien = new System.Windows.Forms.Button();
+            this.HoVaTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdsGiangVien = new System.Windows.Forms.BindingSource(this.components);
             this.maGiangVienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +46,6 @@
             this.queQuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maKhoaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giangVienViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnThongTinGiangVien = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridGiangVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGiangVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giangVienViewModelBindingSource)).BeginInit();
@@ -81,13 +82,14 @@
             this.gioiTinhDataGridViewCheckBoxColumn,
             this.gioiTinhStrDataGridViewTextBoxColumn,
             this.queQuanDataGridViewTextBoxColumn,
-            this.maKhoaDataGridViewTextBoxColumn});
+            this.maKhoaDataGridViewTextBoxColumn,
+            this.HoVaTen});
             this.gridGiangVien.DataSource = this.giangVienViewModelBindingSource;
             this.gridGiangVien.Location = new System.Drawing.Point(11, 85);
             this.gridGiangVien.Name = "gridGiangVien";
             this.gridGiangVien.RowHeadersWidth = 62;
             this.gridGiangVien.RowTemplate.Height = 28;
-            this.gridGiangVien.Size = new System.Drawing.Size(777, 353);
+            this.gridGiangVien.Size = new System.Drawing.Size(1269, 505);
             this.gridGiangVien.TabIndex = 2;
             // 
             // label2
@@ -98,6 +100,25 @@
             this.label2.Size = new System.Drawing.Size(165, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Danh sách Giảng viên";
+            // 
+            // btnThongTinGiangVien
+            // 
+            this.btnThongTinGiangVien.Location = new System.Drawing.Point(1093, 44);
+            this.btnThongTinGiangVien.Name = "btnThongTinGiangVien";
+            this.btnThongTinGiangVien.Size = new System.Drawing.Size(187, 35);
+            this.btnThongTinGiangVien.TabIndex = 4;
+            this.btnThongTinGiangVien.Text = "Thông tin Giảng Viên";
+            this.btnThongTinGiangVien.UseVisualStyleBackColor = true;
+            this.btnThongTinGiangVien.Click += new System.EventHandler(this.btnThongTinGiangVien_Click);
+            // 
+            // HoVaTen
+            // 
+            this.HoVaTen.DataPropertyName = "HoVaTen";
+            this.HoVaTen.HeaderText = "HoVaTen";
+            this.HoVaTen.MinimumWidth = 8;
+            this.HoVaTen.Name = "HoVaTen";
+            this.HoVaTen.ReadOnly = true;
+            this.HoVaTen.Width = 150;
             // 
             // maGiangVienDataGridViewTextBoxColumn
             // 
@@ -177,21 +198,11 @@
             // 
             this.giangVienViewModelBindingSource.DataSource = typeof(HelloForm.ViewModel.GiangVienViewModel);
             // 
-            // btnThongTinGiangVien
-            // 
-            this.btnThongTinGiangVien.Location = new System.Drawing.Point(688, 31);
-            this.btnThongTinGiangVien.Name = "btnThongTinGiangVien";
-            this.btnThongTinGiangVien.Size = new System.Drawing.Size(100, 35);
-            this.btnThongTinGiangVien.TabIndex = 4;
-            this.btnThongTinGiangVien.Text = "Thông tin";
-            this.btnThongTinGiangVien.UseVisualStyleBackColor = true;
-            this.btnThongTinGiangVien.Click += new System.EventHandler(this.btnThongTinGiangVien_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1292, 602);
             this.Controls.Add(this.btnThongTinGiangVien);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gridGiangVien);
@@ -226,5 +237,6 @@
         private System.Windows.Forms.BindingSource giangVienViewModelBindingSource;
         private System.Windows.Forms.BindingSource bdsGiangVien;
         private System.Windows.Forms.Button btnThongTinGiangVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoVaTen;
     }
 }
