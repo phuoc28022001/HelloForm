@@ -67,6 +67,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\LopHocViewModel.cs" />
+    <Compile Include="ViewModel\SinhVienViewModel.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +81,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\AppQuanLySinhVien.Model.AppDBContext.datasource" />
+    <None Include="Properties\DataSources\AppQuanLySinhVien.Model.LopHoc.datasource" />
+    <None Include="Properties\DataSources\AppQuanLySinhVien.Model.SinhVien.datasource" />
+    <None Include="Properties\DataSources\AppQuanLySinhVien.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\AppQuanLySinhVien.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\AppQuanLySinhVien.ViewModel.LopHocViewModel.datasource" />
+    <None Include="Properties\DataSources\AppQuanLySinhVien.ViewModel.SinhVienViewModel.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

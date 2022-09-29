@@ -17,6 +17,15 @@ namespace AppQuanLySinhVien
         {
             InitializeComponent();
             NapDSLopHoc();
+            NapDSSinhVien();
+        }
+
+        public LopHocViewModel selectedLopHoc
+        {
+            get
+            {
+                return cbbLopHoc.SelectedItem as LopHocViewModel;
+            }
         }
 
         void NapDSLopHoc()
@@ -26,9 +35,20 @@ namespace AppQuanLySinhVien
             cbbLopHoc.DisplayMember = "TenLop";
         }
 
+        void NapDSSinhVien()
+        {
+            if(selectedLopHoc != null)
+            {
+                var ls = new SinhVienViewModel().GetList(selectedLopHoc.ID);
+                dataGridView1.DataSource = ls;
+            }
+            
+        }
+
+
         private void cbbLopHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            NapDSSinhVien();
         }
     }
 }
